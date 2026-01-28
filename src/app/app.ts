@@ -1,16 +1,17 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { GameBoardComponent } from './components/game-board.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [GameBoardComponent],
   template: `
-    <h1>Hello, {{ title() }}</h1>
-
-    <router-outlet />
+    <app-game-board />
   `,
-  styles: [],
+  styles: [`
+    :host {
+      display: block;
+    }
+  `],
 })
 export class App {
-  protected readonly title = signal('monster-cards');
 }
