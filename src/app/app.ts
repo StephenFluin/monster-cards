@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { GameBoardComponent } from './components/game-board.component';
 
 @Component({
@@ -7,6 +7,7 @@ import { GameBoardComponent } from './components/game-board.component';
   template: `
     <app-game-board />
   `,
+  changeDetection: ChangeDetectionStrategy.Eager,
   styles: [`
     :host {
       display: block;
